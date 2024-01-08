@@ -31,7 +31,7 @@ const Signupform = () => {
         <div className="flex items-center justify-center mx-auto mt-[4vw] mb-[6vw]">
           <form className="flex flex-col">
             <h2 className="text-[2.5vw] font-semibold text-zinc-800 leading-tight overflow-hidden mb-[1.4vw]">
-              Create a password to start <br />
+              Create a account to start <br />
               your membership
             </h2>
             <p className="text-[1.5vw] font-normal leading-tight overflow-hidden">
@@ -39,13 +39,19 @@ const Signupform = () => {
               We hate paperwork, too.
             </p>
             <input
-            required
+              required
               type="text"
-              placeholder="Email"
+              placeholder="Username"
               className="p-3 my-4 border-zinc-800 border"
             />
             <input
-            required
+              required
+              type="text"
+              placeholder="Email"
+              className="p-3 mb-4 border-zinc-800 border"
+            />
+            <input
+              required
               type="password"
               placeholder="Add a password"
               className="p-3 border-zinc-800 border"
@@ -58,7 +64,7 @@ const Signupform = () => {
             </button>
           </form>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
