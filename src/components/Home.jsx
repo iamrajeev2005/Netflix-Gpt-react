@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const goToSignUp = () => {
-    navigate("/signup");
+    navigate("/auth");
   };
   return (
     <>
@@ -26,15 +26,14 @@ const Home = () => {
             Ready to watch? Enter your email to create or restart your
             membership.
           </h5>
-          <form className=" flex items-center justify-center mt-[1vw] gap-[20px]">
+          <div className=" flex items-center justify-center mt-[1vw] gap-[20px]">
             <button
-              onSubmit={(e) => e.preventDefault()}
               onClick={goToSignUp}
               className=" bg-red-600 text-white px-[1.2vw] py-[.8vw] rounded-md text-[2vw] w-[400px] "
             >
               Sign Up
             </button>
-          </form>
+          </div>
         </div>
       </div>
       <div className="w-screen h-2 bg-zinc-600"></div>
