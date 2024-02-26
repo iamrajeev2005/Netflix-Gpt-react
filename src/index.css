@@ -1,9 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 1, 1);
+  border-radius: 10px;
+}
+.card-scroll::-webkit-scrollbar {
+  height: 3px;
+  background: transparent;
+}
+
+.card-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 1, 1);
+  border-radius: 10px;
 }

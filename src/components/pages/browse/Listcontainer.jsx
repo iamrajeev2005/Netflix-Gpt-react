@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import Card from "../../Card";
+import { useSelector } from "react-redux";
 
 const Listcontainer = () => {
+  const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   return (
-    <div>Listcontainer</div>
-  )
-}
+    <>
+      <div className="relative z-10 -mt-20">
+        <h1 className="text-white font-semibold text-2xl ml-2">Now Playing</h1>
+        <div className="card-scroll overflow-x-auto">
+          <div className="flex w-fit items-center gap-4">
+            {movies?.map((item, index) => {
+              return <Card key={index} item={item} />;
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Listcontainer
+export default Listcontainer;

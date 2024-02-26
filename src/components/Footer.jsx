@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 
 const Footer = () => {
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -16,11 +16,11 @@ const Footer = () => {
         navigate("/browse");
       } else {
         dispatch(removeUser());
-        navigate("/auth")
+        navigate("/auth");
       }
     });
     return () => unsubscribe();
-  }, [dispatch,navigate]);
+  }, [dispatch, navigate]);
   return (
     <>
       <div className="bg-black w-screen h-[60vh] text-slate-200 py-[2.5vw] px-[10vw]">
@@ -67,6 +67,6 @@ const Footer = () => {
       </div>
     </>
   );
-}
+};
 
-export default Footer
+export default Footer;
